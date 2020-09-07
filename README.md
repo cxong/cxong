@@ -3,7 +3,7 @@
 
 - 🔭 I’m currently working on [C-Dogs SDL](https://github.com/cxong/cdogs-sdl)
 
-- 🎮 I make games for jams with [TIC-80](tic.computer)
+- 🎮 I make games for jams with [TIC-80](http://tic.computer)
 
 - 📝 I write articles on [http://cxong.github.io](http://cxong.github.io)
 
