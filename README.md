@@ -7,7 +7,7 @@
 
 - 📝 I write articles on [http://cxong.github.io](http://cxong.github.io)
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=cxong&layout=compact)](https://github.com/cxong/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=cxong&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=cxong&show_icons=true" alt="cxong" /></p>
 
