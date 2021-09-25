@@ -1,9 +1,7 @@
 <h1 align="center">Hi 👋, I'm congusbongus</h1>
 <h3 align="center">A hobbyist game developer and occasional open source tinkerer</h3>
 
-- 🔭 I’m currently working on [C-Dogs SDL](https://github.com/cxong/cdogs-sdl)
-
-- 🎮 I make games for jams with [TIC-80](http://tic.computer)
+- 🔭 I’m looking for new projects to work on!
 
 - 📝 I write articles on [http://cxong.github.io](http://cxong.github.io)
 
