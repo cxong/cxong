@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm congusbongus</h1>
 <h3 align="center">A hobbyist game developer and occasional open source tinkerer</h3>
 
-- 👑 I'm learning Nim!
+- 🔭 I'm looking for new projects to work on!
 
 - 📝 I write articles on [http://cxong.github.io](http://cxong.github.io)
 
