@@ -13,62 +13,198 @@ MUSSPLASH=0
 SFXNEXT=1
 
 class ChunkyFont
-	-- LRUD: left/right/up/down
-	-- T: T-junction (e.g. LT = points up, right and down)
-	-- E: End (e.g. LE = points right only)
-	-- HV: Horizontal/Vertical
-	-- UL: Upper-Left corner (points right and down)
-	@LT=0
-	@RT=1
-	@UE=2
-	@LE=3
-	@H=4
-	@RE=5
-	@UL=16
-	@UR=17
-	@V=18
-	@UT=19
-	@DL=32
-	@DR=33
-	@DE=34
-	@DT=35
+	@SYM_MAP={
+		"}":0,
+		"{":1,
+		"^":2,
+		"<":3,
+		"=":4,
+		">":5,
+		"]":6,
+		"[":7,
+		"r":16,
+		"7":17,
+		"|":18,
+		"Y":19,
+		"o":20,
+		"T":21,
+		"L":32,
+		"J":33,
+		"v":34,
+		"m":35,
+		"_":37,
+	}
 
 	@WIDTH=8
 	@HEIGHT=8
+
+	@LETTERS={
+		"a":{
+			"",
+			"r7",
+			"Lv"
+		},
+		"b":{
+			"^",
+			"]7",
+			"LJ"
+		},
+		"c":{
+			"",
+			"r>",
+			"L>"
+		},
+		"d":{
+			" ^",
+			"r[",
+			"LJ"
+		},
+		"e":{
+			"",
+			"r7",
+			"L>"
+		},
+		"f":{
+			"r>",
+			"]>",
+			"v"
+		},
+		"g":{
+			"",
+			"r7",
+			"L[",
+			"<J"
+		},
+		"h":{
+			"^",
+			"]7",
+			"vv"
+		},
+		"i":{
+			"o",
+			"^",
+			"v"
+		},
+		"j":{
+			" o",
+			" ^",
+			" |",
+			"<J"
+		},
+		"k":{
+			"^",
+			"]>",
+			"vo"
+		},
+		"l":{
+			"^",
+			"|",
+			"v"
+		},
+		"m":{
+			"",
+			"rT7",
+			"vvv"
+		},
+		"n":{
+			"",
+			"r7",
+			"vv"
+		},
+		"o":{
+			"",
+			"r7",
+			"LJ"
+		},
+		"p":{
+			"",
+			"r7",
+			"]J",
+			"v"
+		},
+		"q":{
+			"",
+			"r7",
+			"L[",
+			" v"
+		},
+		"r":{
+			"",
+			"r>",
+			"v"
+		},
+		"s":{
+			"",
+			"r>",
+			"<J"
+		},
+		"t":{
+			"^",
+			"]>",
+			"L>"
+		},
+		"u":{
+			"",
+			"^^",
+			"Lv"
+		},
+		"v":{
+			"",
+			"^^",
+			"LJ"
+		},
+		"w":{
+			"",
+			"^^^",
+			"LmJ"
+		},
+		"x":{
+			"",
+			"oo",
+			"oo"
+		},
+		"y":{
+			"",
+			"^^",
+			"L[",
+			"<J"
+		},
+		"z":{
+			"",
+			"<7",
+			"L>"
+		},
+	}
+	@WIDTHADJ={
+		"j":-1
+	}
 
 	new:=>
 		@x=0
 		@y=0
 
-	a:=>
+	ch:(c)=>
+		xadj=@@WIDTHADJ[c]
+		if xadj==nil
+			xadj=0
+		width=0
 		y=@y
-		spr(@@UL,@x,y)
-		y+=@@HEIGHT
-		spr(@@V,@x,y)
-		y+=@@HEIGHT
-		spr(@@LT,@x,y)
-		y+=@@HEIGHT
-		spr(@@DE,@x,y)
-
-		@x+=@@WIDTH
-		y=@y
-		spr(@@H,@x,y)
-		y+=@@HEIGHT
-		y+=@@HEIGHT
-		spr(@@H,@x,y)
-
-		@x+=@@WIDTH
-		y=@y
-		spr(@@UR,@x,y)
-		y+=@@HEIGHT
-		spr(@@V,@x,y)
-		y+=@@HEIGHT
-		spr(@@RT,@x,y)
-		y+=@@HEIGHT
-		spr(@@DE,@x,y)
-
-		@x+=@@WIDTH
-
+		for row in *@@LETTERS[c]
+			x=@x+xadj*@@WIDTH
+			rowwidth=0
+			for i=1,#row
+				letter=row\sub(i,i)
+				if letter!=" "
+					spr(@@SYM_MAP[letter],x,y)
+					rowwidth+=1
+				x+=@@WIDTH
+			y+=@@HEIGHT
+			width=math.max(width,rowwidth)
+		@x+=(width+xadj)*@@WIDTH
+	
+	s:(s)=>
+		for i=1,#s
+			@ch(s\sub(i,i))
 
 class State
 	new:=>
@@ -116,10 +252,14 @@ class SplashState extends SkipState
 		cls(COLOR_BG)
 		print("Splash screen", 30, 40)
 		cf=ChunkyFont!
-		cf.x=50
-		cf.y=50
-		cf\a!
-		cf\a!
+		cf.x=10
+		cf.y=10
+		cf\ch("a")
+		cf\ch("b")
+		cf\s("cdefghijklmn")
+		cf.x=10
+		cf.y=40
+		cf\s("opqrstuvwxyz")
 
 	next:=>
 		if @tt>=@len
@@ -163,14 +303,19 @@ export TIC=->
 -- 003:0099999909aaaaaa9accaaac9acaaaaa9aaaaaaa9aaaaaaa09aaaaaa00999999
 -- 004:99999999aaaaaaaaccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa99999999
 -- 005:99999900aaaaaa90caaaaaa9aaaaaaa9aaaaaaa9aaaaaaa9aaaaaa9099999900
+-- 006:9acaaaa99acaaaaa9acaaaac9acaaaaa9acaaaaa9acaaaaa9acaaaaa9acaaaa9
+-- 007:9acaaaa9aacaaaa9ccaaaaa9aaaaaaa9aaaaaaa9aaaaaaa9aaaaaaa99acaaaa9
 -- 016:0000099900099aaa009aaaac09accaaa09acaaaa9aaaaaaa9aaaaaaa9acaaaaa
 -- 017:99900000aaa99000caaaa900aaaaaa90aaaaaa90aaaaaaa9aaaaaaa9aaaaaaa9
 -- 018:9acaaaa99acaaaa99acaaaa99acaaaa99acaaaa99acaaaa99acaaaa99acaaaa9
 -- 019:99000099aa9009aaaaa99accaaaaaacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+-- 020:0099990009aaaa909accaaa99acaaaa99aaaaaa99aaaaaa909aaaa9000999900
+-- 021:99999999aaaaaaaaccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa9acaaaa9
 -- 032:9acaaaaa9aaaaaaa9aaaaaaa09aaaaaa09aaaaaa009aaaaa00099aaa00000999
 -- 033:aaaaaaa9aaaaaaa9aaaaaaa9aaaaaa90aaaaaa90aaaaa900aaa9900099900000
 -- 034:9acaaaa99aaaaaa99aaaaaa99aaaaaa99aaaaaa99aaaaaa909aaaa9000999900
 -- 035:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa99aaaaa9009aa99000099
+-- 037:9acaaaa9aacaaaaaccaaaaacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa99999999
 -- </TILES>
 
 -- <WAVES>
