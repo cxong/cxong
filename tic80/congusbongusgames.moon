@@ -23,16 +23,20 @@ class ChunkyFont
 		"]":6,
 		"[":7,
 		"r":16,
-		"7":17,
+		"?":17,
 		"|":18,
 		"Y":19,
 		"o":20,
 		"T":21,
-		"L":32,
-		"J":33,
+		"P":22,
+		"7":23,
+		"6":32,
+		"j":33,
 		"v":34,
 		"m":35,
 		"_":37,
+		"L":38,
+		"J":39,
 	}
 
 	@WIDTH=8
@@ -41,28 +45,28 @@ class ChunkyFont
 	@LETTERS={
 		"a":{
 			"",
-			"r7",
-			"Lv"
+			"r?",
+			"6v"
 		},
 		"b":{
 			"^",
-			"]7",
-			"LJ"
+			"]?",
+			"Lj"
 		},
 		"c":{
 			"",
 			"r>",
-			"L>"
+			"6>"
 		},
 		"d":{
 			" ^",
 			"r[",
-			"LJ"
+			"6J"
 		},
 		"e":{
 			"",
-			"r7",
-			"L>"
+			"r?",
+			"6>"
 		},
 		"f":{
 			"r>",
@@ -72,12 +76,12 @@ class ChunkyFont
 		"g":{
 			"",
 			"r7",
-			"L[",
-			"<J"
+			"6[",
+			"<j"
 		},
 		"h":{
 			"^",
-			"]7",
+			"]?",
 			"vv"
 		},
 		"i":{
@@ -89,7 +93,7 @@ class ChunkyFont
 			" o",
 			" ^",
 			" |",
-			"<J"
+			"<j"
 		},
 		"k":{
 			"^",
@@ -103,60 +107,60 @@ class ChunkyFont
 		},
 		"m":{
 			"",
-			"rT7",
+			"PT?",
 			"vvv"
 		},
 		"n":{
 			"",
-			"r7",
+			"P?",
 			"vv"
 		},
 		"o":{
 			"",
-			"r7",
-			"LJ"
+			"r?",
+			"6j"
 		},
 		"p":{
 			"",
-			"r7",
-			"]J",
+			"P?",
+			"]j",
 			"v"
 		},
 		"q":{
 			"",
 			"r7",
-			"L[",
+			"6[",
 			" v"
 		},
 		"r":{
 			"",
-			"r>",
+			"P>",
 			"v"
 		},
 		"s":{
 			"",
 			"r>",
-			"<J"
+			"<j"
 		},
 		"t":{
 			"^",
 			"]>",
-			"L>"
+			"6>"
 		},
 		"u":{
 			"",
 			"^^",
-			"Lv"
+			"6J"
 		},
 		"v":{
 			"",
 			"^^",
-			"LJ"
+			"Lj"
 		},
 		"w":{
 			"",
 			"^^^",
-			"LmJ"
+			"6mj"
 		},
 		"x":{
 			"",
@@ -166,14 +170,144 @@ class ChunkyFont
 		"y":{
 			"",
 			"^^",
-			"L[",
-			"<J"
+			"6[",
+			"<j"
 		},
 		"z":{
 			"",
-			"<7",
-			"L>"
+			"<?",
+			"6>"
 		},
+		"A":{
+			"r=?",
+			"]=[",
+			"v v"
+		},
+		"B":{
+			"P=?",
+			"]={",
+			"L=j"
+		},
+		"C":{
+			"r=>",
+			"|",
+			"6=>"
+		},
+		"D":{
+			"P=?",
+			"| |",
+			"L=j"
+		},
+		"E":{
+			"P=>",
+			"]=>",
+			"L=>"
+		},
+		"F":{
+			"P=>",
+			"]>",
+			"v"
+		},
+		"G":{
+			"r=>",
+			"|<7",
+			"6=J"
+		},
+		"H":{
+			"^ ^",
+			"]=[",
+			"v v"
+		},
+		"I":{
+			"T",
+			"|",
+			"_"
+		},
+		"J":{
+			"  ^",
+			"^ |",
+			"6=j"
+		},
+		"K":{
+			"^ ^",
+			"]={",
+			"v v"
+		},
+		"L":{
+			"^",
+			"|",
+			"L=>"
+		},
+		"M":{
+			"PY7",
+			"|v|",
+			"v v"
+		},
+		"N":{
+			"P?^",
+			"|||",
+			"v6J"
+		},
+		"O":{
+			"r=?",
+			"| |",
+			"6=j"
+		},
+		"P":{
+			"P=?",
+			"]=j",
+			"v"
+		},
+		"Q":{
+			"r=?",
+			"| |",
+			"6=o"
+		},
+		"R":{
+			"P=?",
+			"]={",
+			"v v"
+		},
+		"S":{
+			"r=>",
+			"6=?",
+			"<=j"
+		},
+		"T":{
+			"<T>",
+			" |",
+			" v"
+		},
+		"U":{
+			"^ ^",
+			"| |",
+			"6=j"
+		},
+		"V":{
+			"^ ^",
+			"|rj",
+			"Lj"
+		},
+		"W":{
+			"^ ^",
+			"|^|",
+			"6mj"
+		},
+		"X":{
+			"o o",
+			" o",
+			"o o"
+		},
+		"Y":{
+			"^ ^",
+			"6Yj",
+			" v"
+		},
+		"Z":{
+			"<=7",
+			"r=j",
+			"L=>"
+		}
 	}
 	@WIDTHADJ={
 		"j":-1
@@ -192,10 +326,13 @@ class ChunkyFont
 		for row in *@@LETTERS[c]
 			x=@x+xadj*@@WIDTH
 			rowwidth=0
+			hasletter=false
 			for i=1,#row
 				letter=row\sub(i,i)
 				if letter!=" "
+					hasletter=true
 					spr(@@SYM_MAP[letter],x,y)
+				if hasletter
 					rowwidth+=1
 				x+=@@WIDTH
 			y+=@@HEIGHT
@@ -252,14 +389,21 @@ class SplashState extends SkipState
 		cls(COLOR_BG)
 		print("Splash screen", 30, 40)
 		cf=ChunkyFont!
-		cf.x=10
-		cf.y=10
 		cf\ch("a")
 		cf\ch("b")
 		cf\s("cdefghijklmn")
-		cf.x=10
-		cf.y=40
+		cf.x=0
+		cf.y+=25
 		cf\s("opqrstuvwxyz")
+		cf.x=0
+		cf.y+=32
+		cf\s("ABCDEFGHIJ")
+		cf.x=0
+		cf.y+=24
+		cf\s("KLMNOPQRS")
+		cf.x=0
+		cf.y+=24
+		cf\s("TUVWXYZ")
 
 	next:=>
 		if @tt>=@len
@@ -297,25 +441,29 @@ export TIC=->
 	state=state\next!
 
 -- <TILES>
--- 000:9acaaaaa9aaaaaaa09aaaaaa009aaaaa009aaaaa09aaaaaa9accaaaa9acaaaaa
--- 001:aaaaaaa9aaaaaaa9aaaaaa90aaaaa900aaaaa900aaaaaa90aaaaaca9aaaaaaa9
+-- 000:9acaaaa99aaaaaaa09aaaaac009aaaaa009aaaaa09aaaaaa9accaaaa9acaaaa9
+-- 001:9acaaaa9aaaaaaa9caaaaa90aaaaa900aaaaa900aaaaaa90aaaaaca99aaaaaa9
 -- 002:0099990009aaaa909accaaa99acaaaa99aaaaaa99aaaaaa99aaaaaa99acaaaa9
 -- 003:0099999909aaaaaa9accaaac9acaaaaa9aaaaaaa9aaaaaaa09aaaaaa00999999
 -- 004:99999999aaaaaaaaccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa99999999
 -- 005:99999900aaaaaa90caaaaaa9aaaaaaa9aaaaaaa9aaaaaaa9aaaaaa9099999900
 -- 006:9acaaaa99acaaaaa9acaaaac9acaaaaa9acaaaaa9acaaaaa9acaaaaa9acaaaa9
 -- 007:9acaaaa9aacaaaa9ccaaaaa9aaaaaaa9aaaaaaa9aaaaaaa9aaaaaaa99acaaaa9
--- 016:0000099900099aaa009aaaac09accaaa09acaaaa9aaaaaaa9aaaaaaa9acaaaaa
--- 017:99900000aaa99000caaaa900aaaaaa90aaaaaa90aaaaaaa9aaaaaaa9aaaaaaa9
+-- 016:0000099900099aaa009aaaac09accaaa09acaaaa9aaaaaaa9aaaaaaa9acaaaa9
+-- 017:99900000aaa99000caaaa900aaaaaa90aaaaaa90aaaaaaa9aaaaaaa99aaaaaa9
 -- 018:9acaaaa99acaaaa99acaaaa99acaaaa99acaaaa99acaaaa99acaaaa99acaaaa9
--- 019:99000099aa9009aaaaa99accaaaaaacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+-- 019:99000099aa9009aacaa99accaaaaaacaaaaaaaaaaaaaaaaaaaaaaaaa9acaaaa9
 -- 020:0099990009aaaa909accaaa99acaaaa99aaaaaa99aaaaaa909aaaa9000999900
 -- 021:99999999aaaaaaaaccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa9acaaaa9
--- 032:9acaaaaa9aaaaaaa9aaaaaaa09aaaaaa09aaaaaa009aaaaa00099aaa00000999
--- 033:aaaaaaa9aaaaaaa9aaaaaaa9aaaaaa90aaaaaa90aaaaa900aaa9900099900000
+-- 022:999999999aaaaaaa9accaaac9acaaaaa9aaaaaaa9aaaaaaa9aaaaaaa9acaaaa9
+-- 023:99999999aaaaaaa9ccccaaa9aaaaaaa9aaaaaaa9aaaaaaa9aaaaaaa99acaaaa9
+-- 032:9acaaaa99aaaaaaa9aaaaaac09aaaaaa09aaaaaa009aaaaa00099aaa00000999
+-- 033:9acaaaa9aaaaaaa9caaaaaa9aaaaaa90aaaaaa90aaaaa900aaa9900099900000
 -- 034:9acaaaa99aaaaaa99aaaaaa99aaaaaa99aaaaaa99aaaaaa909aaaa9000999900
--- 035:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa99aaaaa9009aa99000099
+-- 035:9acaaaa9aacaaaaaccaaaaacaaaaaaaaaaaaaaaaaaa99aaaaa9009aa99000099
 -- 037:9acaaaa9aacaaaaaccaaaaacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa99999999
+-- 038:9acaaaa99acaaaaa9acaaaac9acaaaaa9aaaaaaa9aaaaaaa9aaaaaaa99999999
+-- 039:9acaaaa9aaaaaaa9cacaaaa9aaaaaaa9aaaaaaa9aaaaaaa9aaaaaaa999999999
 -- </TILES>
 
 -- <WAVES>
