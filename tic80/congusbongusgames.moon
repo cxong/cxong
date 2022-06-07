@@ -10,6 +10,10 @@ WIDTH=240
 HEIGHT=136
 COLOR_BG=0
 MUSSPLASH=0
+MUSTEMPO=100
+MUSSPD=3
+FPS=60
+MUSBEATTICKS=FPS*60/MUSTEMPO*MUSSPD/6
 SFXNEXT=1
 
 class ChunkyFont
@@ -340,8 +344,14 @@ class ChunkyFont
 		@x+=(width+xadj)*@@WIDTH
 	
 	s:(s)=>
+		x=@x
 		for i=1,#s
-			@ch(s\sub(i,i))
+			c=s\sub(i,i)
+			if c=="\n"
+				@x=x
+				@y+=@@HEIGHT*4
+			else
+				@ch(c)
 
 class State
 	new:=>
@@ -379,6 +389,13 @@ class SplashState extends SkipState
 	new:=>
 		super(10)
 		@len=250
+		@texts={
+			{t:0,tx:"con"},
+			{t:1,tx:"congus"},
+			{t:2,tx:"congus\nbon"},
+			{t:3,tx:"congus\nbongus"},
+			{t:4,tx:"congus\nbongus\ngames"},
+		}
 
 	reset:=>
 		super!
@@ -388,22 +405,14 @@ class SplashState extends SkipState
 		super!
 		cls(COLOR_BG)
 		print("Splash screen", 30, 40)
-		cf=ChunkyFont!
-		cf\ch("a")
-		cf\ch("b")
-		cf\s("cdefghijklmn")
-		cf.x=0
-		cf.y+=25
-		cf\s("opqrstuvwxyz")
-		cf.x=0
-		cf.y+=32
-		cf\s("ABCDEFGHIJ")
-		cf.x=0
-		cf.y+=24
-		cf\s("KLMNOPQRS")
-		cf.x=0
-		cf.y+=24
-		cf\s("TUVWXYZ")
+		tx=nil
+		for text in *@texts
+			if @tt<text.t*MUSBEATTICKS
+				break
+			tx=text.tx
+		if tx!=nil
+			cf=ChunkyFont!
+			cf\s(tx)
 
 	next:=>
 		if @tt>=@len
