@@ -14,6 +14,7 @@ MUSTEMPO=100
 MUSSPD=3
 FPS=60
 MUSBEATTICKS=FPS*60/MUSTEMPO*MUSSPD/6
+PALETTE_MAP=0x3FF0
 SFXNEXT=1
 
 class ChunkyFont
@@ -45,6 +46,9 @@ class ChunkyFont
 
 	@WIDTH=8
 	@HEIGHT=8
+
+	@COLOR1=10
+	@COLOR2=9
 
 	@LETTERS={
 		"a":{
@@ -345,13 +349,30 @@ class ChunkyFont
 	
 	s:(s)=>
 		x=@x
+		readcolor=0
 		for i=1,#s
 			c=s\sub(i,i)
 			if c=="\n"
 				@x=x
 				@y+=@@HEIGHT*4
+			elseif c=="^"
+				readcolor=1
+				@resetpalette!
+			elseif readcolor==1
+				color=tonumber(c, 16)
+				poke4(PALETTE_MAP * 2 + @@COLOR1, color)
+				readcolor=2
+			elseif readcolor==2
+				color=tonumber(c, 16)
+				poke4(PALETTE_MAP * 2 + @@COLOR2, color)
+				readcolor=0
 			else
 				@ch(c)
+		@resetpalette!
+
+	resetpalette:=>
+		poke4(PALETTE_MAP * 2 + @@COLOR1, @@COLOR1)
+		poke4(PALETTE_MAP * 2 + @@COLOR2, @@COLOR2)
 
 class State
 	new:=>
@@ -390,11 +411,11 @@ class SplashState extends SkipState
 		super(10)
 		@len=250
 		@texts={
-			{t:0,tx:"con"},
-			{t:1,tx:"congus"},
-			{t:2,tx:"congus\nbon"},
-			{t:3,tx:"congus\nbongus"},
-			{t:4,tx:"congus\nbongus\ngames"},
+			{t:0,tx:"^56c^deon"},
+			{t:1,tx:"^56c^deon^56g^deus"},
+			{t:2,tx:"^56c^deon^56g^deus\n^56b^deon"},
+			{t:3,tx:"^56c^deon^56g^deus\n^56b^deon^56g^deus"},
+			{t:4,tx:"^56c^deon^56g^deus\n^56b^deon^56g^deus\n^56g^deames"},
 		}
 
 	reset:=>
