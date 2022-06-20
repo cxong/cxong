@@ -321,9 +321,9 @@ class ChunkyFont
 		"j":-1
 	}
 
-	new:=>
-		@x=0
-		@y=0
+	new:(x,y)=>
+		@x=x
+		@y=y
 
 	ch:(c)=>
 		xadj=@@WIDTHADJ[c]
@@ -425,14 +425,13 @@ class SplashState extends SkipState
 	draw:=>
 		super!
 		cls(COLOR_BG)
-		print("Splash screen", 30, 40)
 		tx=nil
 		for text in *@texts
 			if @tt<text.t*MUSBEATTICKS
 				break
 			tx=text.tx
 		if tx!=nil
-			cf=ChunkyFont!
+			cf=ChunkyFont(50,20)
 			cf\s(tx)
 
 	next:=>
@@ -455,8 +454,7 @@ class TitleState extends SkipState
 	draw:=>
 		super!
 		cls(COLOR_BG)
-		print("This is the title screen! Press any key to go back to the splash screen", 30, 40)
-		spr 1,60,60,14,3,0,0,2,2
+		print("This is the title screen!\nPress any key to go back to the\nsplash screen", 10, 10)
 
 splashState = SplashState!
 titleState = TitleState!
