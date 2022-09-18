@@ -346,7 +346,7 @@ class ChunkyFont
 			y+=@@HEIGHT
 			width=math.max(width,rowwidth)
 		@x+=(width+xadj)*@@WIDTH
-	
+
 	s:(s)=>
 		x=@x
 		readcolor=0
@@ -433,6 +433,28 @@ class SplashState extends SkipState
 		if tx!=nil
 			cf=ChunkyFont(50,20)
 			cf\s(tx)
+		if @tt>5.8*MUSBEATTICKS
+			@drawface(160,70)
+
+	drawface:(x,y)=>
+		--  head
+		elli(x,y,35,30,4)
+		ellib(x,y,35,30,3)
+		-- eyes
+		edx=12
+		circ(x-edx,y-5,9,12)
+		circ(x+edx,y-5,9,12)
+		circ(x-edx,y-5,7,0)
+		circ(x+edx,y-5,7,0)
+		-- mouth
+		my=y+10
+		mdx=25
+		mdy=15
+		its=16
+		d=math.pi/its
+		for i=0,its-1
+			-- draw fan of tris in semi-circle
+			tri(x,my,x+math.cos(d*i)*mdx,my+math.sin(d*i)*mdy,x+math.cos(d*(i+1))*mdx,my+math.sin(d*(i+1))*mdy,2)
 
 	next:=>
 		if @tt>=@len
