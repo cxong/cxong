@@ -3,7 +3,7 @@
 
 - 🌙 I'm learning [MoonScript](https://moonscript.org/)!
 
-- 📝 I write articles on [http://cxong.github.io](http://cxong.github.io)
+- 📝 I write articles on [https://cxong.github.io](http://cxong.github.io)
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=cxong&layout=compact&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
 
