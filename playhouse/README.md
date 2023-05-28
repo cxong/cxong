@@ -1,3 +1,5 @@
+![Playhouse](https://raw.githubusercontent.com/cxong/cxong/master/playhouse/playhouse.png)
+
 Pixel art clubhouse of original characters appearing in games or music I've made.
 
 Places this appears in:
