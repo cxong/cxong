@@ -7,6 +7,7 @@ Places this appears in:
 - https://soundcloud.com/congus-bongus
 - https://mastodon.gamedev.place/@congusbongus
 - https://www.youtube.com/channel/UCuvfP9eohwhTSQiCqrovH3Q
+- https://ko-fi.com/congusbongus
 
 Tiles and characters from https://opengameart.org/content/isometric-classic-hero-tiles-32x32
 by DezrasDragons
