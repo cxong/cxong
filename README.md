@@ -10,3 +10,5 @@
 <p align="center">
 <a href="https://stackoverflow.com/users/2038264" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/stackoverflow.svg" alt="2038264" height="30" width="30" /></a>
 </p>
+
+<a rel="me" href="https://mastodon.gamedev.place/@congusbongus">Mastodon</a>
