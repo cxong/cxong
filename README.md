@@ -1,6 +1,7 @@
 <h1 align="center">Hi 👋, I'm congusbongus</h1>
 <h3 align="center">A hobbyist game developer and occasional open source tinkerer</h3>
 
+- 🔧 I maintain open source games like [C-Dogs SDL](https://github.com/cxong/cdogs-sdl) and [OpenCrystalCaves](https://github.com/gurka/OpenCrystalCaves)
 - 📝 I write articles on [https://cxong.github.io](http://cxong.github.io)
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=cxong&layout=compact&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
