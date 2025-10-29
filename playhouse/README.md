@@ -4,12 +4,11 @@ Pixel art clubhouse of original characters appearing in games or music I've made
 
 Places this appears in:
 
-- https://soundcloud.com/congus-bongus
 - https://mastodon.gamedev.place/@congusbongus
 - https://www.youtube.com/channel/UCuvfP9eohwhTSQiCqrovH3Q
 - https://ko-fi.com/congusbongus
 - https://lospec.com/gallery/congusbongus/congusbonguss-playhouse
-
+- https://github.com/cxong/cxong.github.io/blob/master/images/playhouse.png
 
 Tiles and characters from https://opengameart.org/content/isometric-classic-hero-tiles-32x32
 by DezrasDragons
