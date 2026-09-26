@@ -4,9 +4,9 @@
 - 🔧 I maintain open source games like [C-Dogs SDL](https://github.com/cxong/cdogs-sdl) and [OpenCrystalCaves](https://github.com/gurka/OpenCrystalCaves)
 - 📝 I write articles on [https://cxong.github.io](http://cxong.github.io)
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=cxong&layout=compact&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
+[![Top langs](https://github-stats-extended.vercel.app/api/top-langs/?username=cxong&langs_count=4)](https://github.com/stats-organization/github-stats-extended)
 
-[![User stats](https://github-readme-stats.vercel.app/api?username=cxong&show_icons=true&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
+[![User stats](https://github-stats-extended.vercel.app/api?username=cxong)](https://github.com/stats-organization/github-stats-extended)
 
 <p align="center">
 <a href="https://stackoverflow.com/users/2038264" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/stackoverflow.svg" alt="2038264" height="30" width="30" /></a>
